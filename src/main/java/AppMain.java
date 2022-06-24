@@ -16,5 +16,4 @@ public class AppMain {
         System.out.println(one.getMyAge());
     }
 
-    //some Comment
 }
