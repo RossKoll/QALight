@@ -77,37 +77,64 @@ public class CalcClass {
      */
     public static int divisionDoubled(int numberOne, int numberTwo) {
         int sum = 0;
-        if (numberTwo == 0) {
-            System.out.println("Cannot divide by 0");
-        } else {
+        try {
             sum = (numberOne / numberTwo) * 2;
+            System.out.println("Result of division is : " + sum);
+            return sum;
+        }catch (ArithmeticException e){
+            System.out.println("Cannot divide by 0");
         }
-        System.out.println("Result of division is : " + sum);
         return sum;
     }
 
+//    public static int div(int numOne, int numTwo){
+//        int sum = 0;
+//        try {
+//            sum = numOne / numTwo;
+//            System.out.println("Result of division is : " + sum);
+//            return sum;
+//        }catch (ArithmeticException e){
+//            System.out.println("Cannot divide by 0");
+//        }
+//        return sum;
+//
+//    }
 
     // Homework #3
 
+    /**
+     *
+     * @param var1 int
+     * @param var2 int
+     * @return int
+     */
     public static int division(int var1, int var2){
         int sum = 0;
-        if (var2 == 0) {
-            System.out.println("Cannot divide by 0");
-        } else {
+        try {
             sum = var1 / var2;
+            System.out.println("Result of division is : " + sum);
+            return sum;
+        }catch (ArithmeticException e){
+            System.out.println("Cannot divide by 0");
         }
-        System.out.println("Result of division is : " + sum);
         return sum;
     }
 
+    /**
+     *
+     * @param var1 double
+     * @param var2 double
+     * @return double
+     */
     public static double division(double var1, double var2){
         double sum = 0;
-        if (var2 == 0) {
-            System.out.println("Cannot divide by 0");
-        } else {
+        try {
             sum = var1 / var2;
+            System.out.println("Result of division is : " + sum);
+            return sum;
+        }catch (ArithmeticException e){
+            System.out.println("Cannot divide by 0");
         }
-        System.out.println("Result of division is : " + sum);
         return sum;
     }
 }
