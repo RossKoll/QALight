@@ -87,18 +87,6 @@ public class CalcClass {
         return sum;
     }
 
-//    public static int div(int numOne, int numTwo){
-//        int sum = 0;
-//        try {
-//            sum = numOne / numTwo;
-//            System.out.println("Result of division is : " + sum);
-//            return sum;
-//        }catch (ArithmeticException e){
-//            System.out.println("Cannot divide by 0");
-//        }
-//        return sum;
-//
-//    }
 
     // Homework #3
 
