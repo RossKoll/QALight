@@ -102,6 +102,12 @@ public class CalcClass {
 
     // Homework #3
 
+    /**
+     *
+     * @param var1 int
+     * @param var2 int
+     * @return int
+     */
     public static int division(int var1, int var2){
         int sum = 0;
         try {
@@ -114,6 +120,12 @@ public class CalcClass {
         return sum;
     }
 
+    /**
+     *
+     * @param var1 double
+     * @param var2 double
+     * @return double
+     */
     public static double division(double var1, double var2){
         double sum = 0;
         try {
