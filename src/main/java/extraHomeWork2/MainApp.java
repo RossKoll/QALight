@@ -1,36 +1,23 @@
 package extraHomeWork2;
 
-import static extraHomeWork2.Calculator.*;
+import static extraHomeWork2.CalcClass.*;
+import static extraHomeWork2.WorkWithMassive.analyzeMassive;
 
 public class MainApp {
 
     public static void main(String[] args) {
 
 
-        sumDoubled(5, 5);
-        sumDoubled("Hello", "World!");
-        sumDoubled("5", 5);
-        multiplicationDoubled(5,5);
-        divisionDoubled(0,1);
+        int rez_1 = sumDoubled(5, 5);
+        String rez_2 = sumDoubled("Hello", "World!");
+        int rez_3 = sumDoubled("5", 5);
+        int rez_4 = multiplicationDoubled(5, 5);
+        int rez_5 = divisionDoubled(0, 1);
+        int rez_6 = division(2, 3);
+        double rez_7 = division(2.0, 3.0);
 
-        int[] myArray = new int[]{2,4,26,7,28,10,9,20,33};
-
-        int number = 1;
-        for (int i = 0; i < myArray.length ; i++){
-            if(myArray[i] < 10){
-                System.out.println(number + " : " + myArray[i] + " is less than 10");
-
-            }
-            if(myArray[i] == 10){
-                System.out.println(number + " : " + myArray[i] + " is equal 10");
-
-            }
-            if(myArray[i] > 10){
-                System.out.println(number + " : " + myArray[i] + " is more than 10");
-
-            }
-            number++;
-        }
+        int[] myArray = new int[]{2, 4, 26, 7, 28, 10, 9, 20, 33};
+        analyzeMassive(myArray, 1);
 
     }
 }
