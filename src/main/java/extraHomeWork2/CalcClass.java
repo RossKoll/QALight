@@ -104,6 +104,8 @@ public class CalcClass {
             return sum;
         }catch (ArithmeticException e){
             System.out.println("Cannot divide by 0");
+        }catch (Exception e){
+            System.out.println(e);
         }
         return sum;
     }
@@ -113,15 +115,20 @@ public class CalcClass {
      * @param var1 double
      * @param var2 double
      * @return double
+     * try/catch is not needed as division by 0 return infinite number
      */
     public static double division(double var1, double var2){
         double sum = 0;
         try {
             sum = var1 / var2;
-            System.out.println("Result of division is : " + sum);
-            return sum;
-        }catch (ArithmeticException e){
-            System.out.println("Cannot divide by 0");
+            if (Double.isInfinite(sum)){
+                System.out.println("Number is infinite : " + sum);
+            }else {
+                System.out.println("Result of division is : " + sum);
+                return sum;
+            }
+        }catch (Exception e){
+            System.out.println(e);
         }
         return sum;
     }
