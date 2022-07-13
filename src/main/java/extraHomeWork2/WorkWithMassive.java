@@ -50,15 +50,11 @@ public class WorkWithMassive {
                 for (int j = 0; j < array[i].length; j++) {
                     if (i == j) {
                         array[i][j] = number;
-                        System.out.print(" " + array[i][j] + "\t");
-                    } else {
-                        System.out.print(" " + array[i][j] + "\t");
                     }
                 }
-                System.out.print("\n");
             }
-            return array;
         }
+        print2DArray(array);
         return array;
     }
 
@@ -68,24 +64,18 @@ public class WorkWithMassive {
                 for (int j = 0; j < array[i].length; j++) {
                     if ((i + j + 1) == array.length) {
                         array[i][j] = number;
-                        System.out.print(" " + array[i][j] + "\t");
-                    } else {
-                        System.out.print(" " + array[i][j] + "\t");
                     }
                 }
-                System.out.print("\n");
             }
-            return array;
         }
+        print2DArray(array);
         return array;
     }
 
     public static int[][] fillInTwoDiagonal(int[][] array, int number){
-        int[][] newTempArray = array;
-        if (isMatrixSquare(array)){
-
-           fillInLeftDiagonal(array,number);
-           filInRightDiagonal(array,number);
+        if (is2DArrayCorrect(array)) {
+            fillInLeftDiagonal(array, number);
+            filInRightDiagonal(array, number);
         }
         return array;
     }
@@ -98,6 +88,22 @@ public class WorkWithMassive {
         } else {
             return false;
         }
+    }
+
+    public static boolean is2DArrayCorrect(int[][] array){
+        try {
+            int x = array.length;
+            int y = array[0].length;
+            if (x >= 1 && y >= 1) {
+                return true;
+            } else {
+                System.out.println("Number of column is = '0'");
+                return false;
+            }
+        }catch (ArrayIndexOutOfBoundsException e){
+            System.out.println("Please enter correct array : number of row must be more than '0'");
+        }
+        return false;
     }
 
 }
