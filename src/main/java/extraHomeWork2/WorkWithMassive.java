@@ -8,6 +8,7 @@ public class WorkWithMassive {
         if (massive.length == 0) {
             System.out.println("Array length is equal : '0'");
         }
+
         for (int i = 0; i < massive.length; i++) {
             if (massive[i] < varForComparing) {
                 System.out.println(number + " : " + massive[i] + " is less than " + varForComparing);

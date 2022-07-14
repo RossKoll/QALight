@@ -26,7 +26,7 @@ public class MainApp {
         // ========   Part I : work with Array
 
 
-           int[][] createdArray = fillIn2DArray(3, 3, 8);
+        int[][] createdArray = fillIn2DArray(3, 3, 8);
         print2DArray(createdArray);
 
         // function accept array and fill in left diagonal with predefined number
@@ -41,7 +41,7 @@ public class MainApp {
         System.out.println("Array with RIGHT diagonal : ");
         int[][] arrayRight = fillIn2DArray(3, 3, 8);
 
-//        // function accept array and fill in two diagonals(left and right) with predefined number
+//       // function accept array and fill in two diagonals(left and right) with predefined number
         System.out.println("Array with TWO diagonals : ");
         int[][] arrayTwoDiagonal = fillIn2DArray(3, 3, 8);
         int[][] filledArray = fillInTwoDiagonal(arrayTwoDiagonal,3);
@@ -51,15 +51,15 @@ public class MainApp {
         // =======   Part II : work with String
 
 
-//        String name = " Test_String ";
-//        System.out.println(name.trim());
-//        System.out.println(name.substring(1, 5));
-//        System.out.println(name.trim().replaceFirst("s", "y"));
-//
-//        String character = "T";
-//        if (name.trim().toUpperCase().startsWith(character)) {
-//            System.out.println("First symbol is 'T'");
-//        }
+        String name = " Test_String ";
+        System.out.println(name.trim());
+        System.out.println(name.substring(1, 5));
+        System.out.println(name.trim().replaceFirst("s", "y"));
+
+        String character = "T";
+        if (name.trim().toUpperCase().startsWith(character)) {
+            System.out.println("First symbol is 'T'");
+        }
 
     }
 }
