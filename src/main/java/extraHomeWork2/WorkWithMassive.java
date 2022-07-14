@@ -26,12 +26,26 @@ public class WorkWithMassive {
     }
 
     public static int[][] fillIn2DArray(int numberOfRow, int numberOfColumn, int elementToInput) {
+
+        if (numberOfRow == 0 ){
+            numberOfRow = 1;
+        } else if (numberOfRow < 0) {
+            numberOfRow = Math.abs(numberOfRow);
+        }
+
+        if (numberOfColumn == 0 ){
+            numberOfColumn = 1;
+        } else if (numberOfColumn < 0) {
+            numberOfColumn = Math.abs(numberOfColumn);
+        }
+
         int[][] myArray = new int[numberOfRow][numberOfColumn];
         for (int i = 0; i < myArray.length; i++) {
             for (int j = 0; j < myArray[i].length; j++) {
                 myArray[i][j] = elementToInput;
             }
         }
+        print2DArray(myArray);
         return myArray;
     }
 
@@ -73,37 +87,42 @@ public class WorkWithMassive {
     }
 
     public static int[][] fillInTwoDiagonal(int[][] array, int number){
-        if (is2DArrayCorrect(array)) {
             fillInLeftDiagonal(array, number);
             filInRightDiagonal(array, number);
-        }
+
         return array;
     }
 
     public static boolean isMatrixSquare(int[][] array) {
         int x = array.length;
         int y = array[0].length;
-        if (x == y) {
-            return true;
-        } else {
-            return false;
+        boolean tempVar = false;
+        for (int i = 0; i < array.length; i++) {
+            for (int j = 0; j < array[i].length; j++) {
+                if (x == y) {
+                    tempVar = true;
+                } else {
+                    tempVar = false;
+                }
+            }
         }
+        return tempVar;
     }
 
-    public static boolean is2DArrayCorrect(int[][] array){
-        try {
-            int x = array.length;
-            int y = array[0].length;
-            if (x >= 1 && y >= 1) {
-                return true;
-            } else {
-                System.out.println("Number of column is = '0'");
-                return false;
-            }
-        }catch (ArrayIndexOutOfBoundsException e){
-            System.out.println("Please enter correct array : number of row must be more than '0'");
-        }
-        return false;
-    }
+//    public static boolean is2DArrayCorrect(int[][] array){
+//        try {
+//            int x = array.length;
+//            int y = array[0].length;
+//            if (x >= 1 && y >= 1) {
+//                return true;
+//            } else {
+//                System.out.println("Number of column is = '0'");
+//                return false;
+//            }
+//        }catch (ArrayIndexOutOfBoundsException e){
+//            System.out.println("Please enter correct array : number of row must be more than '0'");
+//        }
+//        return false;
+//    }
 
 }

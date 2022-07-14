@@ -26,27 +26,25 @@ public class MainApp {
         // ========   Part I : work with Array
 
 
-        int[][] createdArray = fillIn2DArray(3, 3, 8);
-        print2DArray(createdArray);
-
-        // function accept array and fill in left diagonal with predefined number
-        System.out.println("Array with LEFT diagonal : ");
-        int[][] arrayFilledWithLeftDiagonal = fillInLeftDiagonal(createdArray,1);
-
-
-        //fillInLeftDiagonal(arrayFilledWithLeftDiagonal,1);
-        System.out.println("Array with RIGHT diagonal : ");
-        int[][] arrayFilledInWithRightDiagonal = filInRightDiagonal(createdArray,3);
-
-
-        // function accept array and fill in left diagonal with predefined number
-        System.out.println("Array with RIGHT diagonal : ");
-        int[][] arrayRight = fillIn2DArray(3, 3, 8);
+           int[][] createdArray = fillIn2DArray(3, 3, 8);
+//        print2DArray(createdArray);
 //
-//        // function accept array and fill in two diagonals(left and right) with predefined number
-        System.out.println("Array with TWO diagonals : ");
-        int[][] arrayTwoDiagonal = fillIn2DArray(3, 3, 8);
-        int[][] filledArray = fillInTwoDiagonal(arrayTwoDiagonal,3);
+//        // function accept array and fill in left diagonal with predefined number
+//        System.out.println("Array with LEFT diagonal : ");
+//        int[][] arrayFilledWithLeftDiagonal = fillInLeftDiagonal(createdArray,1);
+//
+//        //fillInLeftDiagonal(arrayFilledWithLeftDiagonal,1);
+//        System.out.println("Array with RIGHT diagonal : ");
+//        int[][] arrayFilledInWithRightDiagonal = filInRightDiagonal(createdArray,3);
+//
+//        // function accept array and fill in left diagonal with predefined number
+//        System.out.println("Array with RIGHT diagonal : ");
+//        int[][] arrayRight = fillIn2DArray(3, 3, 8);
+//
+////        // function accept array and fill in two diagonals(left and right) with predefined number
+//        System.out.println("Array with TWO diagonals : ");
+//        int[][] arrayTwoDiagonal = fillIn2DArray(3, 3, 8);
+//        int[][] filledArray = fillInTwoDiagonal(arrayTwoDiagonal,3);
 
 
 
