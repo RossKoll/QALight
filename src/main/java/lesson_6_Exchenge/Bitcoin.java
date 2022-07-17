@@ -1,6 +1,6 @@
 package lesson_6_Exchenge;
 
-public class Bitcoin extends Currency implements IsFreeConverted, IsCryptoCurrency{
+public class Bitcoin extends Currency implements  IsCryptoCurrency{
     public Bitcoin(double kursNBU) {
         super(kursNBU);
     }
@@ -10,10 +10,6 @@ public class Bitcoin extends Currency implements IsFreeConverted, IsCryptoCurren
         return null;
     }
 
-    @Override
-    public boolean isFreeConv() {
-        return false;
-    }
 
     @Override
     public boolean isCryptoCurrency() {

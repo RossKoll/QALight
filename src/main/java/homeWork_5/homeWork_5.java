@@ -1,5 +1,6 @@
+package homeWork_5;
+
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
 
 public class homeWork_5 {
@@ -46,7 +47,10 @@ public class homeWork_5 {
     }
 
     public static List<Integer> listPrint(List<Integer> list){
-        Collections.reverse(list);
+        for (int k = 0, j = list.size() - 1; k < j; k++)
+        {
+            list.add(k, list.remove(j));
+        }
         System.out.println("List after revers : " + list);
         return list;
     }
