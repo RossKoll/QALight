@@ -46,6 +46,10 @@ public class MainApp {
         int[][] arrayTwoDiagonal = fillIn2DArray(3, 3, 8);
         int[][] filledArray = fillInTwoDiagonal(arrayTwoDiagonal,3);
 
+        // function which check if array is SQUARE
+        int[][] arrayTest = {{1,1,1},{2,2,2},{3,3,3,}, {4,4,4}};
+        System.out.println("Is MATRIX square : "+isMatrixSquare(arrayTest));
+
 
 
         // =======   Part II : work with String
@@ -60,6 +64,8 @@ public class MainApp {
         if (name.trim().toUpperCase().startsWith(character)) {
             System.out.println("First symbol is 'T'");
         }
+
+
 
     }
 }

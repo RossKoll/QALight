@@ -95,16 +95,23 @@ public class WorkWithMassive {
     }
 
     public static boolean isMatrixSquare(int[][] array) {
-        int x = array.length;
-        int y = array[0].length;
+//        int x = array.length;
+//        int y = array[0].length;
         boolean tempVar = false;
         for (int i = 0; i < array.length; i++) {
             for (int j = 0; j < array[i].length; j++) {
-                if (x == y) {
-                    tempVar = true;
-                } else {
+                if (array.length == array[i].length){
+                    tempVar =  true;
+                }else {
                     tempVar = false;
                 }
+
+                if (tempVar == false){
+                    break;
+                }
+            }
+            if (tempVar == false){
+                break;
             }
         }
         return tempVar;
