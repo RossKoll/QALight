@@ -28,17 +28,8 @@ public class WorkWithMassive {
 
     public static int[][] fillIn2DArray(int numberOfRow, int numberOfColumn, int elementToInput) {
 
-        if (numberOfRow == 0 ){
-            numberOfRow = 1;
-        } else if (numberOfRow < 0) {
-            numberOfRow = Math.abs(numberOfRow);
-        }
-
-        if (numberOfColumn == 0 ){
-            numberOfColumn = 1;
-        } else if (numberOfColumn < 0) {
-            numberOfColumn = Math.abs(numberOfColumn);
-        }
+        numberOfRow = checkInputValue(numberOfRow);
+        numberOfColumn = checkInputValue(numberOfColumn);
 
         int[][] myArray = new int[numberOfRow][numberOfColumn];
         for (int i = 0; i < myArray.length; i++) {
@@ -95,8 +86,6 @@ public class WorkWithMassive {
     }
 
     public static boolean isMatrixSquare(int[][] array) {
-//        int x = array.length;
-//        int y = array[0].length;
         boolean tempVar = false;
         for (int i = 0; i < array.length; i++) {
             for (int j = 0; j < array[i].length; j++) {
@@ -117,20 +106,15 @@ public class WorkWithMassive {
         return tempVar;
     }
 
-//    public static boolean is2DArrayCorrect(int[][] array){
-//        try {
-//            int x = array.length;
-//            int y = array[0].length;
-//            if (x >= 1 && y >= 1) {
-//                return true;
-//            } else {
-//                System.out.println("Number of column is = '0'");
-//                return false;
-//            }
-//        }catch (ArrayIndexOutOfBoundsException e){
-//            System.out.println("Please enter correct array : number of row must be more than '0'");
-//        }
-//        return false;
-//    }
+    public static int checkInputValue(int number){
+        int temp;
+        if (number == 0 ){
+             number = 1;
+        } else if (number < 0) {
+            number = Math.abs(number);
+        }
+        return number;
+    }
+
 
 }
