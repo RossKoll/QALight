@@ -1,13 +1,15 @@
 package lesson_6_Exchenge;
 
 public class Bitcoin extends Currency implements  IsCryptoCurrency{
+
+    private String name = "Bitcoin";
     public Bitcoin(double kursNBU) {
         super(kursNBU);
     }
 
     @Override
     public String CurrencyName() {
-        return null;
+        return name;
     }
 
 
