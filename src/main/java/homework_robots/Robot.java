@@ -100,11 +100,12 @@ public class Robot {
         robot.alreadyUsed.add(letter);
     }
 
-    public static void checkHeals(Robot robot){
-        if (robot.getHealth() <= 0){
-            System.out.println("Robot " + robot.getName() + " is Killed");
+    public boolean checkHeals(){
+        if (this.getHealth() <= 0 ){
+            System.out.println("Robot " + this.getName() + " is Killed");
             continueLoop = false;
         }
+        return continueLoop;
     }
 
 
