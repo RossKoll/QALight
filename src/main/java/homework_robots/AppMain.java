@@ -3,7 +3,6 @@ package homework_robots;
 
 import static homework_robots.MainMenu.printMainMenu;
 import static homework_robots.Menu.getSymbolFromConsole;
-import static homework_robots.Robot.checkHeals;
 import static homework_robots.Robot.setNameForRobot;
 
 public class AppMain {
@@ -42,7 +41,7 @@ public class AppMain {
                 }
             }while (stayOnSameRobot);
 
-            checkHeals(activeRobot);
+            continueLoop = activeRobot.checkHeals();
             activeRobot.setAlreadyShot(true);
 
             if (activeRobot.getHealth() <= 0){
