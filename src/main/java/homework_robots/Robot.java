@@ -4,7 +4,6 @@ import java.util.ArrayList;
 import java.util.Random;
 
 import static homework_robots.AppMain.activeRobot;
-import static homework_robots.AppMain.continueLoop;
 import static homework_robots.Menu.getNameFromConsole;
 
 public class Robot {
@@ -100,13 +99,13 @@ public class Robot {
         robot.alreadyUsed.add(letter);
     }
 
-    public boolean checkHeals(){
-        if (this.getHealth() <= 0 ){
-            System.out.println("Robot " + this.getName() + " is Killed");
-            continueLoop = false;
-        }
-        return continueLoop;
-    }
+//    public boolean checkHeals(){
+//        if (this.getHealth() <= 0 ){
+//            //System.out.println("Robot " + this.getName() + " is Killed");
+//            continueLoop = false;
+//        }
+//        return continueLoop;
+//    }
 
 
 }
